@@ -10,12 +10,21 @@
     <v-navigation-drawer v-model="drawer" temporary>
       <v-divider></v-divider>
       <v-list>
-        <v-list-item link>
+        <v-list-item link @click="goUtenti">
          <v-list-item-content>
             <v-list-item-icon>
               <v-icon size="large" color="black">mdi-account</v-icon>
             </v-list-item-icon>
-            <v-list-item-title @click="goUtenti">Utenti</v-list-item-title>
+            <v-list-item-title >Utenti</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-divider></v-divider>
+        <v-list-item link @click="goProdotti">
+         <v-list-item-content>
+            <v-list-item-icon>
+              <v-icon size="large" color="black">mdi-store</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title >Prodotti</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -62,6 +71,9 @@ export default {
   methods: {
       goUtenti(){
         this.$router.push({ name: 'utenti' });
+      },
+      goProdotti(){
+        this.$router.push({ name: 'prodotti' });
       }
     },
 }

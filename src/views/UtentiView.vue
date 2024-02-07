@@ -60,7 +60,7 @@
               </v-sheet>
             </v-card-text>
             <v-card-actions>
-              <v-btn color="danger" block @click="dialog = false">Close Dialog</v-btn>
+              <v-btn color="red-darken-4" block @click="dialog = false">CLOSE</v-btn>
             </v-card-actions>
           </v-card>
         </v-dialog>
